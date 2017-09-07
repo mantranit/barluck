@@ -1,0 +1,27 @@
+$url: "../fonts";
+
+/* Webfont: Lato-Light */@font-face {
+    font-family: 'LatoWebLight';
+    src: url('#{$url}/Lato-Light.eot'); /* IE9 Compat Modes */
+    src: url('#{$url}/Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$url}/Lato-Light.woff2') format('woff2'), /* Modern Browsers */
+    url('#{$url}/Lato-Light.woff') format('woff'), /* Modern Browsers */
+    url('#{$url}/Lato-Light.svg#Lato Light') format('svg') /* iOS 4.1- */
+    url('#{$url}/Lato-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Regular */@font-face {
+    font-family: 'LatoWeb';
+    src: url('#{$url}/Lato-Regular.eot'); /* IE9 Compat Modes */
+    src: url('#{$url}/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$url}/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+    url('#{$url}/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+    url('#{$url}/Lato-Regular.svg#Lato Regular') format('svg') /* iOS 4.1- */
+    url('#{$url}/Lato-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,46 @@
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #06b11a;
+    @include transition(color 0.2s, background-color 0.2s, width 0.2s, height 0.2s, left 0.2s, top 0.2s, right 0.2s, bottom 0.2s, text-indent 0.2s, margin 0.2s, padding 0.2s, font-size 0.2s);
+    &:hover{
+        text-decoration: underline;
+    }
+}
+ul, ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+figure{
+    margin: 0;
+    line-height: 0;
+}
+img{
+    border: none;
+}
+
+b, strong{
+    font-weight: 500;
+}
+
+blockquote{
+
+}
+
+select, button, input, textarea{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &::-ms-expand {
+        display: none;
+    }
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    &::-ms-value{
+        background-color: transparent;
+    }
+}
