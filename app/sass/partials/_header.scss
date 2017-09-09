@@ -1,14 +1,27 @@
 
-.site-wrapper{
-
-}
-
 .site-header{
-
-
+  background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  .container{
+    text-align: center;
+    padding: 36px 10px 0;
+    transition: padding 0.3s ease;
+  }
+  .logo{
+    display: inline-block;
+    img{
+      width: 180px;
+    }
+  }
 }
 
-
-.site-scrolling{
-
+.scrolling{
+  .site-header{
+    .container{
+      padding: 10px;
+    }
+  }
 }

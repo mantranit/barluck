@@ -18,7 +18,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 gulp.task('build', ['html-include', 'compass'], function(){
-    gulp.start(['images', 'html']);
+    gulp.start(['font', 'images', 'html']);
     // gulp.start(['html']);
 });
 
@@ -39,7 +39,7 @@ gulp.task('compass', function() {
 });
 
 gulp.task('images', function(){
-    gulp.src(['app/images/**/*'])
+    gulp.src(['app/images/**/*', '!app/images/icons', '!app/images/icons/*', '!app/images/icons-2x', '!app/images/icons-2x/*'])
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{
@@ -47,7 +47,7 @@ gulp.task('images', function(){
                 cleanupIDs: false
             }]
         }))
-        .pipe(gulp.dest('dist/assets/images'));
+        .pipe(gulp.dest('dist/images/'));
 });
 
 gulp.task('html', function() {
@@ -56,6 +56,11 @@ gulp.task('html', function() {
         .pipe(gulpif('*.min.js', uglify()))
         .pipe(gulpif('*.min.css', cssnano({ zindex: false })))
         .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('font', function(){
+   return gulp.src(['fonts/*'])
+       .pipe(gulp.dest('dist/fonts/'));
 });
 
 gulp.task('html-include', function() {
