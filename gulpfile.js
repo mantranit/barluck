@@ -59,7 +59,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('font', function(){
-   return gulp.src(['fonts/*'])
+   return gulp.src(['app/fonts/*'])
        .pipe(gulp.dest('dist/fonts/'));
 });
 
