@@ -39,8 +39,19 @@ var BLK = (function(){
 
             return widthNoScroll - widthWithScroll;
         },
+        scrolling: function(){
+            $(window).on('load scroll', function(){
+                var top = $(this).scrollTop(),
+                    wrapper = $('.site-wrapper');
+                if(top > 100){
+                    wrapper.addClass('scrolling');
+                } else {
+                    wrapper.removeClass('scrolling');
+                }
+            });
+        },
         init: function () {
-
+            method.scrolling();
         }
     };
     return {

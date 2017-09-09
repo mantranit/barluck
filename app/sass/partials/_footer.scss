@@ -1,4 +1,25 @@
 .site-footer{
-
-
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  .social-menu{
+  }
+  .social-menu{
+    margin-bottom: 20px;
+    a{
+      display: inline-block;
+      color: white;
+      font-size: 32px;
+      &:first-child{
+        font-size: 30px;
+      }
+      &:last-child{
+        font-size: 34px;
+      }
+    }
+  }
 }

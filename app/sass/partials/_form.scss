@@ -5,11 +5,13 @@
   border: 2px solid white;
   background-color: rgba(#d8d8d8, 0.4);
   color: white;
-  font-size: 24px;
   font-weight: bold;
-  height: 72px;
-  line-height: 72px;
+  font-size: 18px;
+  height: 52px;
+  line-height: 52px;
   padding: 0 100px 0 30px;
+  white-space: nowrap;
+  text-shadow: none;
   &:after{
     content: '';
     display: block;
@@ -19,6 +21,15 @@
 
     position: absolute;
     right: 30px;
-    top: 38px;
+    top: 28px;
+  }
+  @include desktop{
+    font-size: 24px;
+    height: 72px;
+    line-height: 66px;
+    padding: 0 100px 0 30px;
+    &:after{
+      top: 38px;
+    }
   }
 }

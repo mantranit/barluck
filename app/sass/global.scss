@@ -18,12 +18,13 @@ body{
     line-height: 1.4;
     margin: 0;
     padding: 0;
-    @include tablet{
-        font-size: 18px;
+    @include desktop{
+        font-size: 20px;
     }
 }
 
-.site-container{
+.site-wrapper{
+    position: relative;
     //min-width: 1164px;
 }
 
