@@ -66,14 +66,25 @@
 .section--bar{
   background-color: #e6e6e6;
   .section__image, .section__content{
+    @include desktop {
       float: left;
       width: 50%;
       min-height: 100vh;
+    }
   }
   .section__image{
-    background: url(../images/logo-dark.png) no-repeat center center;
+    text-align: center;
+    padding: 100px 0;
+    @include desktop {
+      padding: 0;
+      background: url(../images/logo-dark.png) no-repeat center center;
+    }
     img{
-      visibility: hidden;
+      width: 38%;
+      @include desktop{
+        width: auto;
+        visibility: hidden;
+      }
     }
   }
   .section__content{
@@ -85,18 +96,25 @@
       position: absolute;
       left: 30px;
       bottom: 40px;
-      display: block;
       width: 393px;
       height: 146px;
       background: url(../images/bar.png) no-repeat;
       background-size: 100%;
+      display: none;
+      @include desktop{
+        display: block;
+      }
     }
     .inner{
+      padding: 100px 20px;
+      @include desktop {
+        padding: 0;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 473px;
+      }
     }
   }
 }
@@ -104,15 +122,19 @@
 
 .section--luck{
   .section__image, .section__content{
-    float: right;
-    width: 50%;
-    min-height: 100vh;
+    @include desktop {
+      float: right;
+      width: 50%;
+      min-height: 100vh;
+    }
   }
   .section__image{
-    background: url(../images/img-3.jpg) no-repeat center center #e6e6e6;
-    background-size: cover;
-    img{
-      visibility: hidden;
+    @include desktop {
+      background: url(../images/img-3.jpg) no-repeat center center #e6e6e6;
+      background-size: cover;
+      img {
+        visibility: hidden;
+      }
     }
   }
   .section__content{
@@ -125,66 +147,116 @@
       position: absolute;
       left: 30px;
       bottom: 40px;
-      display: block;
       width: 549px;
       height: 148px;
       background: url(../images/luck.png) no-repeat;
       background-size: 100%;
+      display: none;
+      @include desktop{
+        display: block;
+      }
     }
     .inner{
-      position: absolute;
-      width: 340px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      padding: 100px 20px;
+      @include desktop {
+        padding: 0;
+        position: absolute;
+        width: 340px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
 
 .section--signature-dish{
-  background: url(../images/img-4.jpg) no-repeat center top;
-  background-size: cover;
+  @include desktop {
+    background: url(../images/img-4.jpg) no-repeat center top;
+    background-size: cover;
+  }
+  .section__image{
+    img{
+      @include desktop {
+        visibility: hidden;
+      }
+    }
+  }
   .section__content{
+    background: url(../images/bg-dark.jpg);
+    background-size: cover;
     color: white;
-    width: 512px;
-    position: absolute;
-    top: 80px;
-    left: 50px;
+    padding: 100px 20px;
+    @include desktop {
+      background: none;
+      padding: 0;
+      color: white;
+      width: 512px;
+      position: absolute;
+      top: 80px;
+      left: 50px;
+    }
   }
   h4{
-    margin: 100px 0 10px;
+    margin: 30px 0 5px;
+    @include desktop {
+      margin: 100px 0 10px;
+    }
   }
 }
 
 
 .section--signature-dish--bottom{
-  background: url(../images/img-5.jpg) no-repeat center top;
-  background-size: cover;
+  @include desktop {
+    background: url(../images/img-5.jpg) no-repeat center top;
+    background-size: cover;
+  }
   text-shadow: 0 0 16px rgba(#000000, 0.5);
+  .section__image{
+    img{
+      @include desktop {
+        visibility: hidden;
+      }
+    }
+  }
   .section__content{
+    background: url(../images/bg-dark.jpg);
+    background-size: cover;
     color: white;
-    width: 512px;
-    position: absolute;
-    bottom: 80px;
-    right: 50px;
+    padding: 100px 20px;
+    @include desktop {
+      background: none;
+      padding: 0;
+      width: 512px;
+      position: absolute;
+      bottom: 80px;
+      right: 50px;
+    }
   }
   h4{
-    margin: 100px 0 10px;
+    margin: 30px 0 5px;
+    @include desktop {
+      margin: 100px 0 10px;
+    }
   }
 }
 
 
 .section--our-menu{
   .section__image, .section__content{
-    float: right;
-    width: 50%;
-    min-height: 100vh;
+    @include desktop {
+      float: right;
+      width: 50%;
+      min-height: 100vh;
+    }
   }
   .section__image{
-    background: url(../images/img-6.jpg) no-repeat center center #e6e6e6;
-    background-size: cover;
-    img{
-      visibility: hidden;
+    @include desktop {
+      background: url(../images/img-6.jpg) no-repeat center center #e6e6e6;
+      background-size: cover;
+      img {
+        visibility: hidden;
+      }
     }
   }
   .section__content{
@@ -193,11 +265,19 @@
     color: white;
     position: relative;
     .inner{
-      position: absolute;
-      width: 570px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      padding: 100px 20px;
+      @include desktop {
+        position: absolute;
+        width: 100%;
+        padding: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      @include wide{
+        width: 570px;
+        padding: 0;
+      }
     }
   }
   a{
@@ -215,10 +295,17 @@
   }
 }
 .section--our-menu--list{
+  min-height: 0;
   .section__list-image{
     figure{
       float: left;
-      width: 25%;
+      width: 50%;
+      @include tablet{
+        width: 33.33%;
+      }
+      @include desktop{
+        width: 25%;
+      }
     }
   }
 }
