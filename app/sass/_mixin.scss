@@ -140,7 +140,7 @@
 }
 
 @mixin wide {
-    @media screen and (min-width: 1580px) {
+    @media screen and (min-width: 1440px) {
         @content;
     }
 }

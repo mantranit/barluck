@@ -1,0 +1,14 @@
+.banner{
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/seafood.jpg);
+  min-height: 667px;
+  min-height: 100vh;
+  position: relative;
+  .container{
+    position: absolute;
+    top: 50%;
+
+  }
+}

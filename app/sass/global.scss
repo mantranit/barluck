@@ -32,13 +32,7 @@ body{
 }
 
 .container{
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-    @include desktop{
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+
 }
 
 /* partials */

@@ -1,19 +1,40 @@
 
 .site-header{
-  background-color: black;
+  //background-color: black;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   .container{
     text-align: center;
-    padding: 36px 10px 0;
-    transition: padding 0.3s ease;
+    padding: 36px 10px;
+    transition: all 0.2s;
   }
   .logo{
     display: inline-block;
     img{
       width: 180px;
+    }
+  }
+  .social-menu{
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    transition: all 0.2s;
+    @include tablet{
+      display: block;
+    }
+    a{
+      display: inline-block;
+      color: white;
+      font-size: 25px;
+      &:first-child{
+        font-size: 22px;
+      }
+      &:last-child{
+        font-size: 27px;
+      }
     }
   }
 }
@@ -23,5 +44,8 @@
     .container{
       padding: 10px;
     }
+  }
+  .social-menu{
+    top: 18px
   }
 }
